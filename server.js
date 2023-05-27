@@ -15,12 +15,12 @@ dotenv.config({ path: './config/config.env' });
 const app = require('./app');
 
 // Assigns the DB URI. If DATABASE_CLOUD is present then it also replaces the '<password>' in the DATABASE_CLOUD string to the DATABASE_PASSWORD
-const DB =
-	process.env.DATABASE_LOCAL ||
-	process.env.DATABASE_CLOUD.replace(
-		'<password>',
-		process.env.DATABASE_PASSWORD
-	);
+const DB = 'mongodb+srv://admin:kolawole@cluster3.qogbvn9.mongodb.net/?retryWrites=true&w=majority'
+	//process.env.DATABASE_LOCAL ||
+	//process.env.DATABASE_CLOUD.(
+		//'kolawole',
+		//process.env.DATABASE_PASSWORD
+	//);
 
 const connectDB = async () => {
 	try {
